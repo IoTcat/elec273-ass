@@ -67,12 +67,20 @@ It is assumed that the ball can be kicked randomly and will only fall in the cir
 
 \subsection{Part 1: No Goalkeeper Tests}
 
-In this part, the situation with no goalkeeper was modeled. Firstly, 
+In this part, the situation with no goalkeeper was modeled. Firstly, the theoretical result of the hit rate was calculated under the assumption that the distribution of balls follows uniform distribution. Secondly, Matlab was utilized to simulate this process with a uniform random number generator. Thirdly, the influence of simulating shots number N and experiment repeat times R was studied with perspectives of line charts generated with Matlab. Furthermore, the hypothesis was changed to that the distribution of balls abides by Gaussian distribution and the experiment steps above were repeated for this new assumption.
+
+\subsection{Part 2: With Goalkeeper Tests}
+
+\begin{figure}[htbp]     \begin{centering}
+    \includegraphics[width=0.5\textwidth]{goalkeeper-action.png}
+    \caption{Goalkeeper Action to Penalty Shoot-outs (taken from~\cite{ref:lab})}
+    \label{Fig:goalkeeper-action}
+    \end{centering}
+\end{figure}
+
+Under the condition that there are goalkeeper, this football goal model can be further improved. To easily analyse the situations, the action of the goalkeeper was classified into five types ideally, as shown in Figure \ref{Fig:goalkeeper-action}. Firstly, it was considered that the possibility of these five cases was equal following uniform random distribution. Matlab was used to simulate the shooting process and then the hit rate can be figured out. Secondly, similarly with the produce in Part 1, the hypothesis was changed from uniform random distribution to Gaussian random distribution and the simulation was implemented again. Thirdly, the actions of goalkeeper was updated from equally distributed to that 90\% of the time the goalkeeper may choose position 4 and position 5. Under this circumstance, the probability of scoring was required to be simulated with kicking 100 and 1000 balls.
 
 
-The materials list can be a simple list of all the equipment/apparatus used, in as much detail as possible (eg. mention the make/model of things like signal generators, the values of all components, the exact model of any development boards used etc). If you are using software, the name and version of the software is important.\cite{ref:Bibby} 
-
-The Method/Procedure section describes the experimental process in chronological order (i.e. in the order in which they happened). If you did not follow the documented procedure for any reason, make sure this is mentioned (e.g. ``At step 4 four repetitions were performed instead of three, and the data from the second repetition was ignored. This is due to a circuit fault that was discovered that called the accuracy of these readings into question.'')
 
 % You may want to use the {enumerate} environment for a numbered list.
 %
@@ -89,6 +97,26 @@ The Method/Procedure section describes the experimental process in chronological
 %-------------------------------------------------------------------------------------------------------
 
 \subsection{Part 1: No Goalkeeper Tests}
+
+This section presents and comments the result from the simulation with no goalkeeper.
+
+\subsubsection{Task 1: Calculation}
+
+In this subsection, the theoretical value of scoring probability will be calculated under the condition that balls distributed in the circle with a radius of $\sqrt{5}$ (as shown in Figure \ref{Fig:goal}) uniformly. In this case, the hit rate can be obtained through the fraction of the goal area and the circle area presented in Equation \ref{eq:posibility_by_area}.
+
+\begin{equation}
+P_{scoring} = \frac{S_{rect}}{S_{circle}}.
+\label{eq:posibility_by_area}
+\end{equation}
+
+As the area of the rectangle goal is $8$ and the area of the circle zone is $5\pi$, the possibility then can be computed, which is 51.0\%.
+
+
+\subsubsection{Task 2: Matlab Simulation}
+
+
+
+
 
 This is where you describe the important qualitative and quantitative observations from the experiment. Data should be tabulated and/or graphed. Graphs must always be captioned (as with figures, above), and axes clearly annotated with units. Always follow your graphs with a brief description, demonstrating your understanding of what has been plotted (eg. ``The graph in Fig. 4 illustrates the frequency response of this circuit, with a clear resonance peak at 15~kHz.'') as tables and graphs are rarely self-explanatory. If the results differ from what was expected, explain both \textbf{how} (i.e. in what way) and \textbf{why} (i.e. possible reasons behind this behaviour) when referring to these results.
 
@@ -187,54 +215,146 @@ This final section contains a brief statement to summarise the outcome of the ex
 \appendixpage
 \addappheadtotoc
 
-These Appendices are all optional...
 
 %-------------------------------------------------------------------------------------------------------
-\section{Tables}
+\section{Matlab Source Code}
 %-------------------------------------------------------------------------------------------------------
 
-%If you have pages and pages of numberical results, these can be tabulated in the Appendix rather than included in the body of the report.
+\subsection{Overall Structure}
 
-%-------------------------------------------------------------------------------------------------------
-\section{Program Listings}
-%-------------------------------------------------------------------------------------------------------
+This is the source code files structure instruction, which displays the list of main code files and function files.
 
-Program listings and source code can be neatly incorporated into your reports by including them in a \verb|\lstlisting| environment, as in Listing~\ref{myCircleCode} below, or if you are constantly editing your program, you could import the code directly from the source itself (provided you've uploaded it to your ScribTeX workspace). In this way, whenever you modify the source, all you need to do is recompile the \LaTeX code and your report document will automatically be updated. The command to use would be something like \verb|\lstinputlisting{MY_CIRCLE.m}|.
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Source Code Files Structure},label=tree}
+\lstinputlisting[language=MATLAB]{../src/tree.js}
+
+
+\subsection{Main Codes}
+
+\subsubsection{Task 2\&3}
 
 %-------------------------- Source code / program listings can be inserted using like this -----------
-\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={This is how to include some source code},label=myCircleCode}
-\begin{lstlisting}
-[x,y] = MY_CIRLCLE(x_centre, y_centre, radius)
-
-% MY_CIRCLE.m - A MATLAB function to draw a circle on the screen
-% Syntax is:
-%            [x,y] = MY_CIRLCLE(x_centre, y_centre, radius)
-%
-% Waleed Al-Nuaimy, 1st July 2011
-
-theta = linspace(0, 2*pi, 200);        % in radians
-x     = x_centre + radius*cos(theta);  % radius can be negative!
-y     = y_centre + radius*sin(theta);
-plot(x,y,'r-')                         % connect using red line
-axis('equal')                          % to preserve aspect ratio
-ylabel('y')
-xlabel('x')
-title(['Circle centred at (',num2str(x_centre),',', ...
-       num2str(y_centre),') of radius ',num2str(radius)])
-\end{lstlisting}
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Task 2},label=sct2}
+\lstinputlisting[language=MATLAB]{../src/t2.m}
 %-------------------------------------------------------------------------------------------------------
 
-% If you want to link directly to the source code, you'll need to first upload it to this folder, then the command is: % \lstinputlisting[language=MATLAB]{MY_CIRCLE.m}
 
-%-------------------------------------------------------------------------------------------------------
-\section{Log Book}
+\subsubsection{Task 4}
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Task 4},label=sct4}
+\lstinputlisting[language=MATLAB]{../src/t4.m}
 %-------------------------------------------------------------------------------------------------------
 
-% You can add scanned pages from your log book, or photographs of your circuit etc
 
+\subsubsection{Task 5}
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Task 5},label=sct5}
+\lstinputlisting[language=MATLAB]{../src/t5.m}
 %-------------------------------------------------------------------------------------------------------
-\section{Data Sheets}
+
+
+\subsubsection{Task 7}
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Task 7\_2},label=sct7_2}
+\lstinputlisting[language=MATLAB]{../src/t7_2.m}
 %-------------------------------------------------------------------------------------------------------
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Task 7\_4},label=sct7_4}
+\lstinputlisting[language=MATLAB]{../src/t7_4.m}
+%-------------------------------------------------------------------------------------------------------
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Task 7\_5},label=sct7_5}
+\lstinputlisting[language=MATLAB]{../src/t7_5.m}
+%-------------------------------------------------------------------------------------------------------
+
+\subsubsection{Task 8}
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Task 8},label=sct8}
+\lstinputlisting[language=MATLAB]{../src/t8.m}
+%-------------------------------------------------------------------------------------------------------
+
+\subsubsection{Task 9}
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Task 9},label=sct9}
+\lstinputlisting[language=MATLAB]{../src/t9.m}
+%-------------------------------------------------------------------------------------------------------
+
+\subsubsection{Task 10}
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Task 10\_8},label=sct10_8}
+\lstinputlisting[language=MATLAB]{../src/t10_8.m}
+%-------------------------------------------------------------------------------------------------------
+
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Task 10\_9},label=sct10_9}
+\lstinputlisting[language=MATLAB]{../src/t10_9.m}
+%-------------------------------------------------------------------------------------------------------
+
+\subsection{Function Codes}
+
+\subsubsection{Draw}
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Function drawBackGround},label=scf:drawBackGround}
+\lstinputlisting[language=MATLAB]{../src/func/drawBackGround.m}
+%-------------------------------------------------------------------------------------------------------
+
+\subsubsection{Math}
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Function getDisProb},label=scf:getDisProb}
+\lstinputlisting[language=MATLAB]{../src/func/getDisProb.m}
+%-------------------------------------------------------------------------------------------------------
+
+\subsubsection{Tools}
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Function getDisProb},label=scf:getDisProb}
+\lstinputlisting[language=MATLAB]{../src/func/getDivByPos.m}
+%-------------------------------------------------------------------------------------------------------
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Function isGoalKept},label=scf:isGoalKept}
+\lstinputlisting[language=MATLAB]{../src/func/isGoalKept.m}
+%-------------------------------------------------------------------------------------------------------
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Function isInRect},label=scf:isInRect}
+\lstinputlisting[language=MATLAB]{../src/func/isInRect.m}
+%-------------------------------------------------------------------------------------------------------
+
+
+\subsubsection{Distribution Methods}
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Function normrnd\_circle},label=scf:normrnd_circle}
+\lstinputlisting[language=MATLAB]{../src/func/normrnd_circle.m}
+%-------------------------------------------------------------------------------------------------------
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Function uniform\_5case},label=scf:uniform_5case}
+\lstinputlisting[language=MATLAB]{../src/func/uniform_5case.m}
+%-------------------------------------------------------------------------------------------------------
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Function uniform\_5case\_plus},label=scf:uniform_5case_plus}
+\lstinputlisting[language=MATLAB]{../src/func/uniform_5case_plus.m}
+%-------------------------------------------------------------------------------------------------------
+
+
+%-------------------------- Source code / program listings can be inserted using like this -----------
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Matlab Source Code for Function unifrnd\_circle},label=scf:unifrnd_circle}
+\lstinputlisting[language=MATLAB]{../src/func/unifrnd_circle.m}
+%-------------------------------------------------------------------------------------------------------
+
 
 
 \end{document}
