@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.27)  30 OCT 2019 22:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.27)  31 OCT 2019 20:25
 entering extended mode
 **./ex_report.tex
 (ex_report.tex
@@ -353,7 +353,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-<UnivCrest.png, id=111, 204.765pt x 93.4692pt>
+<UnivCrest.png, id=143, 204.765pt x 93.4692pt>
 File: UnivCrest.png Graphic file (type png)
 <use UnivCrest.png>
 Package pdftex.def Info: UnivCrest.png  used on input line 22.
@@ -379,8 +379,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 26.
-LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 34.
  [1
 
@@ -391,167 +389,196 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 [2]
-<goal.png, id=162, 216.81pt x 180.17313pt>
+<goal.png, id=202, 216.81pt x 180.17313pt>
 File: goal.png Graphic file (type png)
 <use goal.png>
-Package pdftex.def Info: goal.png  used on input line 59.
+Package pdftex.def Info: goal.png  used on input line 61.
 (pdftex.def)             Requested size: 226.48395pt x 188.22237pt.
-<goalkeeper-action.png, id=165, 415.05063pt x 79.29625pt>
-File: goalkeeper-action.png Graphic file (type png)
-<use goalkeeper-action.png>
-Package pdftex.def Info: goalkeeper-action.png  used on input line 75.
-(pdftex.def)             Requested size: 226.48395pt x 43.26942pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.79 \end{figure}
-                  [1 <./goal.png>]pdfTeX warning (ext4): destination with the s
-ame identifier (name{page.2}) has been already used, duplicate ignored
+l.73 
+      [1 <./goal.png>]
+<goalkeeper-action.png, id=211, 415.05063pt x 79.29625pt>
+File: goalkeeper-action.png Graphic file (type png)
+<use goalkeeper-action.png>
+Package pdftex.def Info: goalkeeper-action.png  used on input line 77.
+(pdftex.def)             Requested size: 226.48395pt x 43.26942pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.152 \end{table}
-                  [2 <./goalkeeper-action.png>] [3] (ex_report.bbl
+l.120 
+       [2 <./goalkeeper-action.png>]
+<img/t3.png, id=226, 349.7868pt x 286.671pt>
+File: img/t3.png Graphic file (type png)
+<use img/t3.png>
+Package pdftex.def Info: img/t3.png  used on input line 122.
+(pdftex.def)             Requested size: 226.48395pt x 185.61656pt.
+<img/t4.png, id=228, 383.031pt x 301.6068pt>
+File: img/t4.png Graphic file (type png)
+<use img/t4.png>
+Package pdftex.def Info: img/t4.png  used on input line 134.
+(pdftex.def)             Requested size: 226.48395pt x 178.34224pt.
+ [3 <./img/t3.png (PNG copy)> <./img/t4.png (PNG copy)>]
+<img/t5.png, id=239, 371.9496pt x 301.6068pt>
+File: img/t5.png Graphic file (type png)
+<use img/t5.png>
+Package pdftex.def Info: img/t5.png  used on input line 146.
+(pdftex.def)             Requested size: 226.48395pt x 183.6531pt.
+<img/t7_3.png, id=242, 349.7868pt x 286.671pt>
+File: img/t7_3.png Graphic file (type png)
+<use img/t7_3.png>
+Package pdftex.def Info: img/t7_3.png  used on input line 164.
+(pdftex.def)             Requested size: 226.48395pt x 185.61656pt.
+ [4 <./img/t5.png (PNG copy)>]
+<img/t7_4.png, id=251, 383.031pt x 301.6068pt>
+File: img/t7_4.png Graphic file (type png)
+<use img/t7_4.png>
+Package pdftex.def Info: img/t7_4.png  used on input line 175.
+(pdftex.def)             Requested size: 226.48395pt x 178.34224pt.
+<img/t7_5.png, id=255, 371.9496pt x 301.6068pt>
+File: img/t7_5.png Graphic file (type png)
+<use img/t7_5.png>
+Package pdftex.def Info: img/t7_5.png  used on input line 184.
+(pdftex.def)             Requested size: 226.48395pt x 183.6531pt.
+ [5 <./img/t7_3.png (PNG copy)> <./img/t7_4.png (PNG copy)>]
+<img/t8_1.png, id=272, 349.7868pt x 286.671pt>
+File: img/t8_1.png Graphic file (type png)
+<use img/t8_1.png>
+Package pdftex.def Info: img/t8_1.png  used on input line 207.
+(pdftex.def)             Requested size: 170.71652pt x 139.91011pt.
+<img/t8_2.png, id=273, 349.7868pt x 286.671pt>
+File: img/t8_2.png Graphic file (type png)
+<use img/t8_2.png>
+Package pdftex.def Info: img/t8_2.png  used on input line 213.
+(pdftex.def)             Requested size: 170.71652pt x 139.91011pt.
+
+
+LaTeX Warning: Reference `sct:t9' on page 6 undefined on input line 224.
+
+[6 <./img/t7_5.png (PNG copy)> <./img/t8_1.png (PNG copy)> <./img/t8_2.png (PNG
+ copy)>]
+<img/t9_1.png, id=287, 349.7868pt x 286.671pt>
+File: img/t9_1.png Graphic file (type png)
+<use img/t9_1.png>
+Package pdftex.def Info: img/t9_1.png  used on input line 231.
+(pdftex.def)             Requested size: 170.71652pt x 139.91011pt.
+<img/t9_2.png, id=288, 349.7868pt x 286.671pt>
+File: img/t9_2.png Graphic file (type png)
+<use img/t9_2.png>
+Package pdftex.def Info: img/t9_2.png  used on input line 237.
+(pdftex.def)             Requested size: 170.71652pt x 139.91011pt.
+
+
+LaTeX Warning: Reference `sct:t10_8' on page 7 undefined on input line 248.
+
+
+LaTeX Warning: Reference `sct:t10_9' on page 7 undefined on input line 248.
+
+<img/t10_11.png, id=296, 349.7868pt x 286.671pt>
+File: img/t10_11.png Graphic file (type png)
+<use img/t10_11.png>
+Package pdftex.def Info: img/t10_11.png  used on input line 255.
+(pdftex.def)             Requested size: 170.71652pt x 139.91011pt.
+<img/t10_12.png, id=297, 349.7868pt x 286.671pt>
+File: img/t10_12.png Graphic file (type png)
+<use img/t10_12.png>
+Package pdftex.def Info: img/t10_12.png  used on input line 261.
+(pdftex.def)             Requested size: 170.71652pt x 139.91011pt.
+[7 <./img/t9_1.png (PNG copy)> <./img/t9_2.png (PNG copy)>]
+<img/t10_21.png, id=309, 349.7868pt x 286.671pt>
+File: img/t10_21.png Graphic file (type png)
+<use img/t10_21.png>
+Package pdftex.def Info: img/t10_21.png  used on input line 275.
+(pdftex.def)             Requested size: 170.71652pt x 139.91011pt.
+<img/t10_22.png, id=310, 349.7868pt x 286.671pt>
+File: img/t10_22.png Graphic file (type png)
+<use img/t10_22.png>
+Package pdftex.def Info: img/t10_22.png  used on input line 281.
+(pdftex.def)             Requested size: 170.71652pt x 139.91011pt.
+ [8 <./img/t10_11.png (PNG copy)> <./img/t10_12.png (PNG copy)> <./img/t10_21.p
+ng (PNG copy)> <./img/t10_22.png (PNG copy)>] [9] (ex_report.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 25--29
 \OT1/cmr/m/n/10.95 u-la-tion,'' []$https : / / vital . liv . ac . uk / bbcswebd
 av / pid-[]2008619-[]dt-[]content-[]rid-[]11366223[]1 /
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
-[]\OT1/cmr/m/n/10.95 WikiBooks, ``L[]T[]X ad-vanced math-e-mat-ics,'' []$http :
- / / en . wikibooks . org / wiki / LaTeX /
- []
-
-) [4] ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
+) [10] ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 228.
+nput line 353.
 
 (../src/tree.js
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
-) (../src/t2.m [5]) (../src/t4.m
-Overfull \hbox (90.9339pt too wide) in paragraph at lines 20--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
+) (../src/t2.m [11]) (../src/t4.m) (../src/t5.m [12])
+(../src/t7_2.m [13]) (../src/t7_4.m) (../src/t7_5.m [14]) (../src/t8.m)
+(../src/t9.m [15]) (../src/t10_8.m) [16] (../src/t10_9.m)
+(../src/func/drawBackGround.m) (../src/func/getDisProb.m [17]
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
+0.
 
-) (../src/t5.m [6]
-Overfull \hbox (90.9339pt too wide) in paragraph at lines 20--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-) (../src/t7_2.m
-Overfull \hbox (113.13397pt too wide) in paragraph at lines 19--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
- []
-
-) (../src/t7_4.m [7]
-Overfull \hbox (90.9339pt too wide) in paragraph at lines 20--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-) (../src/t7_5.m
-Overfull \hbox (90.9339pt too wide) in paragraph at lines 20--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-[8]) (../src/t8.m
-Overfull \hbox (201.93427pt too wide) in paragraph at lines 19--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
- []
-
-) (../src/t9.m
-Overfull \hbox (201.93427pt too wide) in paragraph at lines 19--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
- []
-
-[9]) (../src/t10_8.m
-Overfull \hbox (229.68436pt too wide) in paragraph at lines 19--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
- []
-
-) (../src/t10_9.m [10]
-Overfull \hbox (229.68436pt too wide) in paragraph at lines 19--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
- []
-
-) (../src/func/drawBackGround.m) (../src/func/getDisProb.m
-Overfull \hbox (224.13434pt too wide) in paragraph at lines 2--3
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][] 
- []
-
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 9
-.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 9.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 10.
 
-Overfull \hbox (157.53412pt too wide) in paragraph at lines 9--10
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] 
+Overfull \hbox (7.68362pt too wide) in paragraph at lines 10--11
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [11] (../src/func/getDivByPos.m) (../src/func/isGoalKept.m)
-(../src/func/isInRect.m) (../src/func/normrnd_circle.m [12])
+) (../src/func/getDivByPos.m) (../src/func/isGoalKept.m)
+(../src/func/isInRect.m [18]) (../src/func/normrnd_circle.m)
 (../src/func/uniform_5case.m) (../src/func/uniform_5case_plus.m)
-(../src/func/unifrnd_circle.m)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 360.
- [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 360.
+(../src/func/unifrnd_circle.m [19])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 485.
+ [20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 485.
  (ex_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 360.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 360.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 485.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 485.
 Package rerunfilecheck Info: File `ex_report.out' has not changed.
-(rerunfilecheck)             Checksum: 211ADE009D5283170FA9900ED5714074;1713.
+(rerunfilecheck)             Checksum: CDB739ED8FA5CB5B8D3C639590FA9039;2396.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 360.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 485.
  ) 
 Here is how much of TeX's memory you used:
- 9576 strings out of 492452
- 136165 string characters out of 3129819
- 446211 words of memory out of 3000000
- 13298 multiletter control sequences out of 15000+200000
- 11458 words of font info for 40 fonts, out of 3000000 for 9000
+ 9739 strings out of 492452
+ 138546 string characters out of 3129819
+ 446870 words of memory out of 3000000
+ 13404 multiletter control sequences out of 15000+200000
+ 11290 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,11n,45p,943b,1892s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-sy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on ex_report.pdf (15 pages, 448746 bytes).
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ti9.pfb>
+Output written on ex_report.pdf (22 pages, 1198802 bytes).
 PDF statistics:
- 846 PDF objects out of 1000 (max. 8388607)
- 485 named destinations out of 1000 (max. 500000)
- 232 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 993 PDF objects out of 1000 (max. 8388607)
+ 532 named destinations out of 1000 (max. 500000)
+ 366 words of extra memory for PDF output out of 10000 (max. 10000000)
 

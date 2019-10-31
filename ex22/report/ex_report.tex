@@ -23,7 +23,7 @@
                                                    % Thanks to Huang Shanyue for suggesting this
 
 \begin{abstract}
-This document describes what is expected from an engineering laboratory report. While this is not a definitive guide to report-writing, it is intended as a guide to assist in documenting and presenting your experimental work. Appended to this guide are some real examples of common mistakes that should be avoided. It is expected that lab reports are prepared using the \LaTeX~ typesetting system, adopting pne of the standard report templates provided on VITAL.
+This report introduced the results and discussion of the experiment which aiming to explore the features and applications of Monte Carlo method. A penalty kicking model was established wit Matlab with random kicks following uniform distribution and Gaussian distribution. The situation with no goalkeeper, uniformly acted goalkeeper and goalkeeper with special strategy were considered. In the discussion section, the pro and con of Monte Carlo method, the influence of changing of standard deviation in Gaussian cases, and some possible suggestions for penalty kicks participants were studied.
 \end{abstract}
 
 \fbox{
@@ -43,8 +43,10 @@ I confirm that I have read and understood the University's definitions of plagia
 \section{Introduction}
 %-------------------------------------------------------------------------------------------------------
 
+Monte Carlo method was a method to solve problems that can be transformed to statistical problems. The theory of Monte Carlo method is to utilize random variables to simulate statistic problems and apply means to approach the theoretical result. This method was first put forwarded by scientists who worked for producing the first nuclear weapon in the world. The Monte Carlo method introduce procedures to simulate a realistic problem step by step. The first step is to design a set of random samples of size N from according probability distribution methods. Secondly, obtain the values of this part by implementing respective methods. Thirdly, calculate the value wanted from this set of samples. Fourthly, repeat the above steps for R times and examine the actual value with these partial results. \cite{ref:lab}
 
-Include a statement of the problem to be investigated, and why is addressing this problem worthwhile or important. This section should also introduce the history and theoretical background of the problem, a brief statement of the general procedure adopted and hint at expected results. This section is sometimes broken down into subsections: Objectives and Theoretical Background.
+Monte Carlo method was widely used in physics, computing Science, finance, telecommunications and games etc.. With the development of computer technology, the effective and efficiency of the application of Monte Carlo method were considerably improved, which indicated more general value of this method for modern industry. It was significant to explore and acknowledge some basic features and usages of Monte Carlo method.
+
 
 %-------------------------------------------------------------------------------------------------------
 \section{Materials and Methods}
@@ -112,91 +114,214 @@ P_{scoring} = \frac{S_{rect}}{S_{circle}}.
 As the area of the rectangle goal is $8$ and the area of the circle zone is $5\pi$, the possibility then can be computed, which is 51.0\%.
 
 
-\subsubsection{Task 2: Matlab Simulation}
+\subsubsection{Task 2\&3: Matlab Simulation}
+
+To simulate a uniform random kicking situation, Matlab was utilized to generate virtual kicking and display the distribution in illustration. The code was shown in Listing \ref{sct2} in Appendix. This code achieved the requirement of both Task 2 and Task 3, which allowed user to input the shots times N and experiment repeat times R and then the possibility of scoring would be given out and a illustration of shotting will be presented.
+
+\begin{figure}[htbp]     \begin{centering}
+    \includegraphics[width=0.5\textwidth]{img/t3.png}
+    \caption{Shotting Illustration with N=1000 \& R=1 (Task 3)}
+    \label{Fig:task3}
+    \end{centering}
+\end{figure}
+
+
+Run the code, with the input of $N=1000$ and $R=1$, it was indicated that the scoring possibility was approximate 51\% and the generated shotting illustration was shown in Figure \ref{Fig:task3}.
+
+\subsubsection{Task 4: Perspective Towards N}
+
+\begin{figure}[htbp]     \begin{centering}
+    \includegraphics[width=0.5\textwidth]{img/t4.png}
+    \caption{Line Chart of Probability against N with R=5 (Task 4)}
+    \label{Fig:task4}
+    \end{centering}
+\end{figure}
+
+With the code in Listing \ref{sct4}, a line chart of scoring probability against N can be obtained. As it presented in Figure \ref{Fig:task4}, the value of the probability approached 51\% when the N increased. This may indicate that, with the shotting times increasing, the experimental value could become more stable and approach the theoretical value, which is 51.0\% as it mentioned in Task 1 in this case.
+
+
+\subsubsection{Task 5: Perspective Towards R}
+
+\begin{figure}[htbp]     \begin{centering}
+    \includegraphics[width=0.5\textwidth]{img/t5.png}
+    \caption{Line Chart of Probability against R with N=1000 (Task 5)}
+    \label{Fig:task5}
+    \end{centering}
+\end{figure}
+
+By practicing the source code of Listing \ref{sct5} in Appendix, the probability against R with $N=1000$ was explored. As it shown in Figure \ref{Fig:task5}, similar with the result in Task 4, the probability became stable at 51\% when the experiment repeat more times. However, this phenomenon was not so obvious as it shown in Task4. One reason for this is that the increasing range of Task 4 was around 100000 but the increasing for Task 5 is only 20.
+
+\subsubsection{Task 6: Compare R and N}
+
+From Task4 and Task 5, it was noticed that with the increasing of total shotting times, the probability of scoring would become stable and approach 51.0\%, which is its theoretical value. It was also mentioned that the reason why the tendency of stabilisation in Task 5 was not as obvious as Task 4 was that Task 4 shotting considerably more times than Task 5. In this case, it can also be indicated that the increasing of R and N can both promote the accuracy of the experimental probability.
+
+\subsubsection{Task 7: Gaussian Distribution}
+
+
+In this case, it was required to substitute the distribution generation method from uniform random distribution to Gaussian random distribution. With a smart design of the program architecture, the only thing needed was to change the method (function) parameters in the code of Task 2\&3, Task 4, Task 5 from unifrnd\_circle to normrnd\_circle.
+
+\begin{figure}[htbp]     \begin{centering}
+    \includegraphics[width=0.5\textwidth]{img/t7_3.png}
+    \caption{Shotting Illustration with N=1000 \& R=1 (Task 7\_3)}
+    \label{Fig:task7_3}
+    \end{centering}
+\end{figure}
+
+\newpage
+
+Using the code in Listing \ref{sct7_2}, Task 2 and Task 3 were repeated as required. Figure \ref{Fig:task7_3} illustrated the same simulation with Task 2 with Gaussian method. Comparing with the uniform situation, the distribution in this case seemed to be more centralized at the center of the goal. Inevitably, the probability increased to 74\% in this case, which was considerable large than the uniform one.
+
+\begin{figure}[htbp]     \begin{centering}
+    \includegraphics[width=0.5\textwidth]{img/t7_4.png}
+    \caption{Line Chart of Probability against N with R=5 (Task 7\_4)}
+    \label{Fig:task7_4}
+    \end{centering}
+\end{figure}
+
+Listing \ref{sct7_4} presented the source code for the repeat of Task 4. By running Listing \ref{sct7_4}, Figure \ref{Fig:task7_4} which explored the relation between scoring probability and shooting times can be generated. Similar with the uniform distribution, with the shotting times increasing, the probability become stable at 73\%, which was different from the value 51\% in uniform case.
+
+\begin{figure}[htbp]     \begin{centering}
+    \includegraphics[width=0.5\textwidth]{img/t7_5.png}
+    \caption{Line Chart of Probability against R with N=1000 (Task 7\_5)}
+    \label{Fig:task7_5}
+    \end{centering}
+\end{figure}
+
+Listing \ref{sct7_5} displayed the Matlab code for the exploration of the relation between the probability and experiment repeat times R. As the result shown in Figure \ref{Fig:task7_5}, even if the increasing of R was slowly, it can also be figured out that the probability was trying to approach around 73\%.
 
 
 
+\subsection{Part 2: With Goalkeeper Tests}
+
+This section presents and comments the result from the simulation with goalkeeper.
+
+\subsubsection{Task 8: Uniform Case}
+
+As the goalkeeper in this case was exist, several functions such as uniform\_5case (Listing \ref{scf:uniform_5case}) was designed to simulate the action of the goalkeeper and one function isGoalKept (Listing \ref{scf:isGoalKept}) was utilized to judge whether a ball was scored. With a Matlab project architecture with high reusability, the addition of goalkeeper can be easily achieved by simply changing several parameters as it shown in Listing \ref{sct8}.
 
 
-This is where you describe the important qualitative and quantitative observations from the experiment. Data should be tabulated and/or graphed. Graphs must always be captioned (as with figures, above), and axes clearly annotated with units. Always follow your graphs with a brief description, demonstrating your understanding of what has been plotted (eg. ``The graph in Fig. 4 illustrates the frequency response of this circuit, with a clear resonance peak at 15~kHz.'') as tables and graphs are rarely self-explanatory. If the results differ from what was expected, explain both \textbf{how} (i.e. in what way) and \textbf{why} (i.e. possible reasons behind this behaviour) when referring to these results.
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{img/t8_1.png}
+\caption{Scored Balls Distribution Simulation for R=100}
+\label{Fig:task8_1}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{img/t8_2.png}
+\caption{Scored Balls Distribution Simulation for R=1000}
+\label{Fig:task8_2}
+\end{minipage}
+\end{figure}
 
-% This is how you could include a figure
-%
-%\begin{figure}[htbp]     \begin{centering}
-%    \includegraphics[width=0.5\textwidth]{OpAmp.jpg}
-%    \caption{Circuit diagram of non-inverting amplifier circuit used in Part 1 (taken from~\cite{ref:Radio})}
-%    \end{centering}
-%    \label{Fig:OpAmp}
-%\end{figure}
-
-% Here are some example tables
-
-The summary of the experimental results is presented in Table~\ref{tab:summary}
-
-\begin{table}[htbp]
-\caption{Note that table captions are placed above the tables, not below as for figures}
-\label{tab:summary}
-\begin{center}
-\begin{tabular}{ccc}
-\hline
- $P$ (W)      & $V$ (V)       & $I$ (A)   \\
-\hline
-$0.0\pm0.01$ & $0.0\pm0.01$ & $0.0\pm0.01$  \\
- 0.1         & 0.2          &  0.3         \\
- 0.1         & 0.2          &  0.3         \\
- 0.1         & 0.2          &  0.3         \\
-
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+Figure \ref{Fig:task8_1} and Figure \ref{Fig:task8_2} displayed the situation of $R=100$ and $R=1000$ correspondingly. It can be noticed that the scoring probability for 100 and 1000 kicks were 26\% and 35\%. After repeating the case of $R=100$ for several times, it was observed that the value of probability was shaken around 35\%, thus it was explained that as the kicks increased, the scoring probability could approach 35\%. Compared with the scoring probability 51\% in Task 1 and Task 3, it can be figured that , with the same distribution method, the scoring probability considerably decreased after adding a goalkeeper.
 
 
-\begin{table}[htbp]
-\caption{Resistance and Temperature of the Filament}
-\label{tab:data}
-\begin{center}
-\begin{tabular}{|c||c|c|c|}
-\hline
-$R$ ($\Omega$) & $T$ (K) & $1/T$ (K$^{-1}$) & $\ln P$ \\
-\hline\hline
-151.00$\pm$3.92 & 828.35$\pm$23.46& $1.2072\times10^{-3}$& -13.29 \\ \hline
-157.12$\pm$3.71 & 856.88$\pm$22.25& $1.1671\times10^{-3}$& -12.64 \\ \hline
-162.53$\pm$3.49 & 881.99$\pm$21.02& $1.1338\times10^{-3}$& -12.33 \\ \hline
-166.67$\pm$3.33 & 901.14$\pm$20.13& $1.1097\times10^{-3}$& -11.90 \\ \hline
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+\subsubsection{Task 9: Gaussian Case}
+
+By substituting the distribution method parameter from Function unifrnd\_circle (Listing \ref{scf:unifrnd_circle}) to Function normrnd\_circle (Listing \ref{scf:normrnd_circle}) as shown in Listing \ref{sct:t9}, the behavior of the kickers can be switched to Gaussian mode.
+
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{img/t9_1.png}
+\caption{Scored Balls Distribution (Gaussian) Simulation for R=100}
+\label{Fig:task9_1}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{img/t9_2.png}
+\caption{Scored Balls Distribution (Gaussian) Simulation for R=1000}
+\label{Fig:task9_2}
+\end{minipage}
+\end{figure}
+
+The simulated scoring probability for Gaussian situation was 53\% and 47\% for $R=100$ and $R=1000$ correspondingly. With the increasing of the kicks, the probability approached 47.3\%. The distribution illustrations were shown as Figure \ref{Fig:task9_1} and \ref{Fig:task9_2} respectively. Comparing with the result in Task 8, the concentration of the kicks was higher than the balls distribution in Task 8, which is also the distinct between uniform distribution and Gaussian distribution. Therefore, the final scoring probability was improved as more kicks fallen into the goal. Different from the result in Task 7 with no goalkeeper, the scoring probability was considerable decreased since a considerable number of kicks in the goal were blocked by the goalkeeper. This explained the drop down of the result from Task 7 to this Task.
+
+
+\subsubsection{Task 10: Smarter Goalkeepers}
+
+In this part, the goalkeeper was required to be simulated to be smarter. For technique reasons, it was assumed that the goalkeeper tended to choose the last two cases in Figure \ref{Fig:goalkeeper-action} with 90\%. To achieve this, a uniform\_5case\_plus (Listing \ref{scf:uniform_5case_plus}) Function was designed to substitute the former uniform\_5case (Listing \ref{scf:uniform_5case}) Function to Listing \ref{sct:t10_8} and Listing \ref{sct:t10_9}. After the modification, the result can be generated with Function unifrnd\_circle (Listing \ref{scf:unifrnd_circle}) in uniform case and Function normrnd\_circle (Listing \ref{scf:normrnd_circle}) in Gaussian case.
+
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{img/t10_11.png}
+\caption{Scored Balls Distribution Simulation for R=100}
+\label{Fig:task10_11}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{img/t10_12.png}
+\caption{Scored Balls Distribution Simulation for R=1000}
+\label{Fig:task10_12}
+\end{minipage}
+\end{figure}
+
+\newpage
+
+Figure \ref{Fig:task10_11} and Figure \ref{Fig:task10_12} presented the result of 100 kicks and 1000 kicks with uniform distribution, which were 37\% and 38\% correspondingly. Comparing with the result 26\% and 35\% in Task 8, it was observed that the scoring probability was increased since the goalkeeper only tended to block the kicks in the 4\&5 cases, which may mean that there were more scored kicks on the upper and middle area.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{img/t10_21.png}
+\caption{Scored Balls Distribution (Gaussian) Simulation for R=100}
+\label{Fig:task10_21}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{img/t10_22.png}
+\caption{Scored Balls Distribution (Gaussian) Simulation for R=1000}
+\label{Fig:task10_22}
+\end{minipage}
+\end{figure}
+
+Figure \ref{Fig:task10_21} and Figure \ref{Fig:task10_22} displayed the Gaussian method simulation result with the kicks of 100 and 1000, which were 56\% and 51\%. Unlike to the result 53\% and 47\% in Task 9, it can also be indicated that the scoring probability was decreased comparing to the situation that the goalkeeper uniformly randomly acted. The reason for this was considered quite similar to the reason mentioned in the last paragraph. Nevertheless, the result should be slight different as the distribution was changed to Gaussian distribution thus this could give rise to a distinct increased value of the final result, which was not clearly indicated by the simulation.
+
 
 %------------------------------------------------------------------------------------------------------- 
 \section{Discussion}
 %-------------------------------------------------------------------------------------------------------
 
-The Discussion section allows you to fully discuss and interpret the results and the results of the any analysis carried out. It is also important here to relate your findings to the experimental objectives, i.e. do your results support the theoretical background, and have the objectives of the experiment been met? Are the results reliable and/or significant?
+In terms of the advantages of Monte Carlo method, from this experiment, four advantages can be concluded. Firstly, with Monte Carlo method, a complex math process, such as the calculation of the scoring probability in Gaussian distribution, can be easily achieved through a computer. Secondly, with the increasing of the experiment repeat times, the error of the result can be considerably reduced. Furthermore, it was flexible when using Monte Carlo method to balance the accuracy of the result and the time consumed on computing, which means that, it would be possible to obtain a rough result in a short time in some situation. Additionally, nearly all problems which can be transformed to statistic problems can be approached via Monte Carlo method. \textbf{Q1}
 
-Mathematical expressions can be included in \LaTeX documents easily by surrounding them in \verb|$| signs, such as $f$, $\delta x$, $\Omega_2$, $y=mx+b$ or $\mu = \frac{1}{N}\sum_{i=1}^N x_i$. Numbered equations can be created just as easily using the \verb|equation| environment:
+The drawbacks of Monte Carlo method were mainly classified into the following three points. Firstly, a considerable number of computing resources and time are required when using Monte Carlo method to obtain a accuracy result. Secondly, the error generated by the Monte Carlo method is probability error and can not be effectively removed. Moreover, as the generation process is simulated artificially, Monte Carlo method seems to be limited in some periodical application and may give rise to generate same random values. \textbf{Q1}
+
+Although the model in this experiment has fully considered the situation of the kicks and the actions of the goalkeeper, there are still several improvement can be proposed. Firstly, the reaction of the goalkeeper could be designed according to the kicking direction of the kicker. Secondly, the effect from the environment such as the wind and the sun, which may dazzling the goalkeeper, can also be considered and influence the action of the kickers and the goal keeper. Besides, the behavior classification of the goalkeeper can be further divided. Furthermore, it is also believed that even the goalkeeper choose the right action, it is still possible that the ball finally go through the goal and scores. \textbf{Q2}
+
+After changing the standard deviation of the Gaussian distribution in Task 7 and Task 9, it was observed that the result of scoring probability would change. For both Task 7 and Task 8, when the standard deviation become smaller, the kicks will become more concentrated to the center of the goal, which indicates increasing precision and not changing accuracy. \textbf{Q3}
+
+To find the relation of estimating the value of $\pi$, from Equation \ref{eq:posibility_by_area}, the following Equation can be obtained. \textbf{Q4}.
 
 \begin{equation}
-\mu = \frac{1}{N}\sum_{i=1}^N x_i.
-\label{eq:mean}
+P_{scoring} = \frac{WL}{\pi R^2}.
+\label{eq:P_detail}
 \end{equation}
 
-When making reference to the above equation, you simply need to mention the label, as in ``\verb|...as shown in Equation~\ref{eq:mean}.|'', and the Equation number will be inserted automatically. If you need to show several lines of mathematical expressions, you can use the \verb|eqnarray| environment as below:
+From Equation \ref{eq:P_detail}, the relation of $\pi$ and $P_{scoring}$ can be conducted as the following equation.
 
-\begin{eqnarray}
-  P & = & I V             \\
-    & = & I^2 R           \\
-    & = & \frac{V^2}{R}
-\label{eq:power}
-\end{eqnarray}
-Further guidance on writing and manipulating mathematical expressions, symbols and equations can be found online in references such as~\cite{ref:Maths}.
+\begin{equation}
+\pi = \frac{WL}{P_{scoring} R^2}.
+\label{eq:estimate_pi}
+\end{equation}
+
+After input the result of scoring probability 51\% in Task 2 to Equation \ref{eq:estimate_pi}, the value of $\pi$ can be calculated, which is $3.137$. For the result in the Gaussian case, after the value 74\% is input, the $\pi$ is calculated to be $2.16$, which is quite far from the right value. The reason for this is that the area of the circle which contains the $\pi$ is formed uniformly, which is similar to the definition of uniform distribution but different from the Gaussian distribution. In a word, the ununiformity of Gaussian distribution causes this deviation. \textbf{Q4}
+
+From the result of Part 2 simulation (Figure \ref{Fig:task8_2}, \ref{Fig:task9_2}, \ref{Fig:task10_12}, \ref{Fig:task10_22}), it is advised to the penalty takers that the scoring opportunity could be higher if they kick towards the upper left corner and upper right corner. As for the goalkeepers, it is suggested that they should protect the corner of the goal more and not just focus on several special action modes, which means that, try to protect the area of the goal as much as possible. \textbf{Q5}
 
 %-------------------------------------------------------------------------------------------------------
 \section{Conclusions}
 %-------------------------------------------------------------------------------------------------------
 
-This final section contains a brief statement to summarise the outcome of the experiment, and a statement outlining to what extent the objectives of the experiment have been met, and what has been learnt as a result of this. In some ways the Conclusions section is a reflection of the Abstract, reiterating what the experiment was aiming to achieve, and summarising the outcomes. It can also be thought of as a summary of the Discussion section.
+In this experiment, features and application of Monte Carlo method were explored and discussed with the assistance of Matlab. Penalty kicks were simulated with the distribution of kicks following uniform distribution and Gaussian distribution and the goalkeeper with different behaviors. It was further discussed about the advantages and limitation of Monte Carlo method as well as some suggestions against the penalty takers and the goalkeepers on the basis of the modeling result.
 
 %
 
@@ -224,7 +349,7 @@ This final section contains a brief statement to summarise the outcome of the ex
 
 This is the source code files structure instruction, which displays the list of main code files and function files.
 
-\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Source Code Files Structure},label=tree}
+\lstset{language=MATLAB, frame=single, basicstyle=\footnotesize, backgroundcolor=\color{MyLightYellow}, caption={Source Code Files Structure},label=Listing:tree}
 \lstinputlisting[language=MATLAB]{../src/tree.js}
 
 
