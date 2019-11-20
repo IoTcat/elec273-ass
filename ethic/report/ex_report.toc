@@ -1,0 +1,16 @@
+\thispagestyle {empty}
+\contentsline {section}{\numberline {1}Scenario 1}{1}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Dilemma}{1}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Analysis/Discussion}{1}{subsection.1.2}% 
+\contentsline {subsubsection}{\numberline {1.2.1}Is Moral Useful In This Situation?}{1}{subsubsection.1.2.1}% 
+\contentsline {subsubsection}{\numberline {1.2.2}Behind The Normality of Cheating Fund}{1}{subsubsection.1.2.2}% 
+\contentsline {subsubsection}{\numberline {1.2.3}Gain and Pain for Sudobuild}{1}{subsubsection.1.2.3}% 
+\contentsline {subsubsection}{\numberline {1.2.4}Gain and Pain for Building Company}{2}{subsubsection.1.2.4}% 
+\contentsline {subsubsection}{\numberline {1.2.5}Gain and Pain for Central Government}{2}{subsubsection.1.2.5}% 
+\contentsline {subsection}{\numberline {1.3}Recommendation}{2}{subsection.1.3}% 
+\contentsline {section}{\numberline {2}Scenario 3}{3}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Dilemma}{3}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Analysis/Discussion}{3}{subsection.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.1}The Concept of Privacy}{3}{subsubsection.2.2.1}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Possibility of Better Explain to Clients}{3}{subsubsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Recommendation}{3}{subsection.2.3}% 
