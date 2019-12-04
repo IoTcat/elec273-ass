@@ -1,0 +1,6 @@
+\thispagestyle {empty}
+\contentsline {section}{\numberline {1}Scenario}{1}{section.1}% 
+\contentsline {section}{\numberline {2}Dilemma}{1}{section.2}% 
+\contentsline {section}{\numberline {3}What Could Be Done?}{1}{section.3}% 
+\contentsline {section}{\numberline {4}Discussion}{1}{section.4}% 
+\contentsline {section}{\numberline {5}Recommendation}{3}{section.5}% 
